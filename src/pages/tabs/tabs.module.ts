@@ -3,8 +3,7 @@ import { IonicPageModule } from 'ionic-angular';
 import { FormsModule } from '@angular/forms';
 
 import { TabsPage } from './tabs';
-import {ComponentsModule} from "../../components/components.module";
-import {RegistComponent} from "../../components/regist/regist";
+
 
 @NgModule({
   declarations: [
@@ -12,10 +11,9 @@ import {RegistComponent} from "../../components/regist/regist";
   ],
   imports: [
     FormsModule,
-    ComponentsModule,
     IonicPageModule.forChild(TabsPage),
   ],
 
-  entryComponents:[RegistComponent]
+  entryComponents:[]
 })
 export class TabsPageModule {}

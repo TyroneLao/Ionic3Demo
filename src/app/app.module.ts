@@ -5,7 +5,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-// import { HomePage } from '../pages/home/home';
+import {HttpService} from "../services/httpservice/http.service";
+import {AlertService} from "../services/alertservice/alert.service";
+import {LoadingService} from "../services/loadingservice/loading.service";
+import {ToastService} from "../services/toastservice/toast.service";
+import { TestProvider } from '../providers/test/test';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +29,14 @@ import { MyApp } from './app.component';
   providers: [
     StatusBar,
     SplashScreen,
+    HttpService,
+    AlertService,
+    LoadingService,
+    ToastService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    TestProvider,
+    TestProvider,
+    TestProvider,
 
   ]
 })

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {NavController, IonicPage, ModalController} from 'ionic-angular';
 import {User} from "../../interfaces/user.interface";
+import {ComponentsModule} from "../../components/components.module";
 import {RegistComponent} from "../../components/regist/regist";
 
 
@@ -27,9 +28,10 @@ export class HomePage {
 
   ionViewDidEnter(){
     console.log('ionViewDidLoad page-home');
+
     let isRegist:boolean=false;
     if(!isRegist){
-      let modal = this.modalCtrl.create(RegistComponent);
+      let modal = this.modalCtrl.create("ModalPage");
       modal.present();
       modal.onDidDismiss(()=>{
         console.log('我回来啦');
