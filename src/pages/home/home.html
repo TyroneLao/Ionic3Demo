@@ -1,14 +1,37 @@
+
 <ion-header>
+
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title>tabs</ion-title>
   </ion-navbar>
+
 </ion-header>
 
+
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <form novalidate #f="ngForm"><!--当提交表单时不对表单数据（输入）进行验证;否则会根据type进行验证-->
+    <ion-list>
+
+      <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text" name="name" [(ngModel)]="user.name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="Email" name="email" [(ngModel)]="user.accout.email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" name="password" [(ngModel)]="user.accout.password"></ion-input>
+      </ion-item>
+
+    </ion-list>
+  </form>
+
+
+
+
+  <div>{{ user | json }}</div>
+  <div>{{ f.value | json }}</div>
+  <!-- <div>{{ name }}</div> -->
 </ion-content>

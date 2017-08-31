@@ -1,16 +1,8 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-import { User } from './signup.interface'
-/**
- * Generated class for the TabsPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 
 @IonicPage({
-  name:'tabs',
+  name: 'tabs',
   segment: 'tabs',
 })
 @Component({
@@ -19,18 +11,10 @@ import { User } from './signup.interface'
 })
 export class TabsPage {
 
-  public user : User={
-      name:'11',
-      email:'11@qq.com',
-      password:'12qwe',
-      comfirmpsd:'12qwe'
-      // name:'',
-      // accout:{
-      //   email :'',
-      //   confim:''
-      // }
-  };
-  
+  public tab1Root='HomePage';
+ /* public tab2Root='';
+  public tab3Root='';*/
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
