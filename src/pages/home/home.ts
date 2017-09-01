@@ -25,19 +25,21 @@ export class HomePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad page-home');
   }
+  //
+  // ionViewDidEnter(){
+  //   console.log('ionViewDidLoad page-home');
+  // }
 
-  ionViewDidEnter(){
-    console.log('ionViewDidLoad page-home');
-
+  public geRegist(){
+    let innerHtml=`<div>hhhh</div>`;
     let isRegist:boolean=false;
     if(!isRegist){
-      let modal = this.modalCtrl.create("ModalPage");
+      let modal = this.modalCtrl.create("ModalPage",{innerHtml:innerHtml});
       modal.present();
       modal.onDidDismiss(()=>{
         console.log('我回来啦');
       })
     }
-
   }
 
 

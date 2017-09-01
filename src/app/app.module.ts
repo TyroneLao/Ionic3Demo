@@ -37,6 +37,7 @@ import { TestProvider } from '../providers/test/test';
     TestProvider,
     TestProvider,
     TestProvider,
+    TestProvider,
 
   ]
 })
