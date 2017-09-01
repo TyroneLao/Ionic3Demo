@@ -8,7 +8,7 @@ import {RegistComponent} from "../../components/regist/regist";
 
 @NgModule({
   declarations: [
-    TabsPage,
+    TabsPage
   ],
   imports: [
     FormsModule,
